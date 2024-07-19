@@ -1,17 +1,21 @@
-{ lib, buildGoPackage, fetchFromGitHub }:
+{
+  lib,
+  buildGoModule,
+  fetchFromGitHub,
+}:
 
-buildGoPackage rec {
+buildGoModule rec {
   pname = "gotree";
-  version = "0.1.0";
+  version = "0.2.0";
 
   src = fetchFromGitHub {
     owner = "elbachir-one";
     repo = "gt";
     rev = "v${version}";
-    hash = "sha256-sM4iEsobN4ZLVW2Nk1/lP5utsu8qaKIytxrOPK3/2nY=";
+    hash = "sha256-baK2pA+jVTeMy06jrn2VrQZUsMCf7wpX7gX8mnnDh3A=";
   };
 
-  goPackagePath = "github.com/elbachir-one/gt";
+  vendorHash = null;
 
   meta = {
     description = "gt is a tree-like program written in Go with a lot of features.";
