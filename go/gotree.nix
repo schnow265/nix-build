@@ -1,6 +1,6 @@
-with import <nixpkgs> {};
+{ lib, buildGoPackage, fetchFromGitHub }:
 
-buildGoModule rec {
+buildGoPackage rec {
   pname = "gotree";
   version = "0.1.0";
 
@@ -8,10 +8,10 @@ buildGoModule rec {
     owner = "elbachir-one";
     repo = "gt";
     rev = "v${version}";
-    hash = "sha256-SRVXcdgtRpWqvO28CnUcx40nFJnG+Hd94Ezgaj5xK6A=";
+    hash = "sha256-sM4iEsobN4ZLVW2Nk1/lP5utsu8qaKIytxrOPK3/2nY=";
   };
 
-  vendorHash = "sha256-/kxEnw8l9S7WNMcPh1x7xqiQ3L61DSn6DCIvJlyrip0=";
+  goPackagePath = "github.com/elbachir-one/gt";
 
   meta = {
     description = "gt is a tree-like program written in Go with a lot of features.";

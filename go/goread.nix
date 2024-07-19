@@ -1,4 +1,4 @@
-with import <nixpkgs> {};
+{ lib, buildGoModule, fetchFromGitHub }:
 
 buildGoModule rec {
   pname = "goread";
