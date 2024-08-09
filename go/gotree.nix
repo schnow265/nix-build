@@ -6,7 +6,7 @@
 
 buildGoModule rec {
   pname = "gotree";
-  version = "0.2.0";
+  version = "1.2.0";
 
   src = fetchFromGitHub {
     owner = "elbachir-one";
